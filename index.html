@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Fitness Trainer. Transform Your Body, Transform Your Life: Achieve Your Fitness Goals with Expert
+    Guidance!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .cta-button {
+      background-color: #FF5722;
+      color: #fff;
+      font-size: 20px;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 5px;
+    }
+
+    .cta-button:hover {
+      background-color: #FF7043;
+    }
+
+
+    section.features {
+      margin: 0;
+      padding: 0;
+
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* Optional - for a fixed background */
+      background-repeat: no-repeat;
+
+
+
+
+    }
+
+    section.features background-image {
+      opacity: 0.6;
+    }
+
+    .main_features, .features, .pricing {
+      position: relative;
+      height: 105vh;
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      /*justify-content: center;*/
+      flex-direction: column;
+    }
+
+    div.plans {
+      display: flex;
+      align-items: center;
+      /*justify-content: center;*/
+      flex-direction: row;
+    }
+
+    .main_features::before, .pricing::before {
+      content: "";
+      background-size: cover;
+      background-attachment: fixed;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.25;
+
+    }
+
+    .main_features::before {
+      background-image: url('img/geert-pieters-NbpUM86Jo8Y-unsplash.jpg');
+    }
+
+    .features::before {
+      background-image: url('img/kike-vega-F2qh3yjz6Jk-unsplash.jpg');
+    }
+
+    .pricing::before {
+      background-image: url('img/mr-lee-f4RBYsY2hxA-unsplash.jpg');
+    }
+
+    .contact::before {
+      background-image: url('img/kike-vega-F2qh3yjz6Jk-unsplash.jpg');
+    }
+
+    .header {
+      background-image: url('img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg');
+    }
+
+
+    .features h1, .features p, .main_features h1, .main_features p, .pricing h2, .pricing p {
+      position: relative;
+      color: #000000;
+      font-size: 22px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    div.video_carusel iframe {
+      padding: 5px;
+    }
+
+     section.features, .main_features {
+      height: 100vh;
+      width: 100%;
+       padding-top: 30px;
+       padding-bottom: 20px;
+
+    }
+section.videos {
+   height: 90vh;
+}
+
+    section {
+      margin-top: 15px;
+    }
+
+
+    section.contact {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    nav li a, nav li a:visited {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      width: 100px;
+    }
+
+    .full_contacts img {
+      width: 90%;
+      cursor: pointer;
+    }
+
+    .contact-item{
+       cursor: pointer;
+    }
+
+    il.menu_option a {
+      display: inline-block
+    }
+
+    ul .menu_option {
+      background: #FF5722;
+      padding: 10px;
+      width: 60px;
+       border-radius: 5px;
+
+    }
+
+
+    .full_contacts, .contact-methods-all, .copyright {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .list_features {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .contact_information {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+    }
+
+    .copyright {
+      padding-top: 20px;
+    }
+
+    .feature {
+      align-content: start;
+      width: 30%;
+      height: 280px;
+      background-color: lightgray;
+      line-height: 1.7em;
+
+       box-shadow: rgba(17, 12, 46, 0.15) 0px 24px 25px 0px;
+
+    }
+
+    .feature p {
+      margin: 20px;
+    }
+
+    .feature p.feature_header {
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: start;
+    }
+
+    section h1 {
+      font-size: 36px;
+      padding-top: 20px;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-methods_left, .contact-methods_right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-methods_left a, .contact-methods_right a, .contact-methods a, .contact-info,
+    .contact-methods_left a:hover, .contact-methods_right a:hover, .contact-methods a:hover {
+      text-decoration: none;
+      color: #FF5722;
+
+    }
+
+    div.contact-item p {
+      line-height: 1.6em;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+
+    div.article-subscription {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+    }
+
+    .contact-methods li a {
+      padding: 0px 29px 0px 29px;
+    }
+
+    #message {
+
+      width: 100%;
+      height: 110px;
+    }
+
+    div.message form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    div.contact-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 45px;
+    }
+
+    .feature .feature_description {
+      font-size: 17px;
+      line-height: 1.4em;
+    }
+
+    .plan_description {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      line-height: 1.5em;
+    }
+
+    .plan {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: start;
+      align-self: start;
+    }
+
+    .video-descriprion {
+      line-height: 1.5em;
+      padding-bottom: 25px;
+      padding-top: 25px;
+    }
+
+    section {
+      padding-top: 20px;
+    }
+
+    .description p{
+      font-size: 16px;
+      line-height: 1.5em;
+    }
+
+    div{
+       border-radius: 25px;
+    }
+
+
+
+    .parallax {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.parallax-background {
+    background-image: url('img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.parallax-content {
+    text-align: center;
+    padding: 20% 0;
+    color: #333;
+}
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/contacts.css">
+  <link rel="stylesheet" type="text/css" href="css/viber.css">
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+  <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+<header class="header">
+  <h1>Transform Your Body, Transform Your Life <br/>Achieve Your Fitness Goals with Expert Guidance!</h1>
+</header>
+<div class="container">
+
+
+  <div class="landing-page">
+    <header>
+      <nav>
+        <ul>
+          <li class="menu_option"><a href="#">Home</a></li>
+          <li class="menu_option"><a href="#features">Features</a></li>
+          <li class="menu_option"><a href="#pricing">Pricing</a></li>
+          <li class="menu_option"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="main_features">
+      <div>
+        <h1>Unlock Your Full Potential with Personalized Workouts and Nutrition Consultations!</h1>
+      </div>
+      <div class="video-descriprion description" style="font-size:12px; background-color: white; margin: 20px; padding: 20px">
+
+
+        <p>We're thrilled to introduce you to our newest addition to the fitness world – Sergey! He is not
+          just a fitness enthusiast, but a passionate individual who has embarked on a journey to transform lives
+          through
+          personalized fitness training.</p>
+        <p>As a fresh face in the fitness industry, Sergey brings a unique and dynamic approach to personal
+          fitness. Having recently completed Sergey rigorous certification in personal training, Sergey is
+          armed with the latest knowledge, techniques, and a burning desire to help you achieve your fitness goals.</p>
+        <p>If you're ready to kickstart your fitness journey with a trainer who is passionate, committed, and ready to
+          go
+          the extra mile, then Sergey is the fitness professional for you. Join Him in His pursuit
+          of helping individuals like you unlock their full potential and achieve greatness.</p>
+        <p>Get in touch with Sergey today to embark on a personalized fitness course that will change your life
+          for the better. Your journey to a healthier, happier you starts here!</p>
+      </div>
+
+      <a href="#contact" class="cta-button">Get Started</a>
+    </section>
+    <section id="features" class="features">
+      <h2>Our Features</h2>
+
+      <div class="list_features">
+
+        <div class="feature">
+
+          <p class="feature_header"><i class="fa fa-check"></i> Certified Expertise</p>
+          <p class="feature_description">Our trainer is a certified fitness professional with a proven track record of
+            helping clients reach their
+            fitness objectives</p>
+        </div>
+        <div class="feature">
+
+          <p class="feature_header"><i class="fa fa-check"></i> Personalized Approach</p>
+          <p class="feature_description">We understand that every individual is unique. Our tailored fitness plans are
+            designed to meet your
+            specific
+            needs and goals.</p>
+        </div>
+        <div class="feature">
+
+          <p class="feature_header"><i class="fa fa-check"></i> Goal-Oriented Training</p>
+          <p class="feature_description">Whether you're aiming to lose weight, build muscle, increase flexibility, or
+            enhance your overall health,
+            we're here to help you succeed. </p>
+        </div>
+      </div>
+
+      <div class="list_features">
+
+        <div class="feature">
+
+          <p class="feature_header"><i class="fa fa-check"></i> Support and Encouragement</p>
+          <p class="feature_description">Our trainer will be with you every step of the way, offering the support and
+            motivation you need to stay on track.</p>
+        </div>
+        <div class="feature">
+
+          <p class="feature_header"><i class="fa fa-check"></i> Track Your Progress</p>
+          <p class="feature_description">We use state-of-the-art tracking tools to monitor your progress and make
+            necessary adjustments to your program.</p>
+        </div>
+        <div class="feature">
+
+          <p class="feature_header"><i class="fa fa-check"></i> Flexible Scheduling</p>
+          <p class="feature_description">We work around your schedule, making it easy for you to prioritize your health
+            and well-being.</p>
+        </div>
+      </div>
+
+
+    </section>
+    <section id="pricing" class="pricing">
+      <h2>Pricing Plans</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Basic Plan</h3>
+          <p>Starting at €10/hour</p>
+          <a href="#contact" class="cta-button">Choose Plan</a>
+          <div class="plan_description">
+            <ol>
+              <li>
+                Personal Training Sessions: Access to regular one-on-one training sessions with a certified fitness
+                trainer.
+              </li>
+
+              <li>
+                Customized Workouts: Tailored exercise plans designed to help you meet your specific fitness goals.
+              </li>
+
+              <li>
+                Nutritional Guidance: Basic dietary advice to complement your fitness routine and optimize your results.
+              </li>
+
+              <li>
+                Progress Tracking: Regular assessment and tracking of your fitness progress.
+              </li>
+
+              <!--              <li>-->
+              <!--                Email Support: Access to your trainer via email for questions and guidance.-->
+              <!--              </li>-->
+
+              <!--              <li>-->
+              <!--                Flexible Scheduling: Convenient scheduling options to fit your lifestyle.-->
+              <!--              </li>-->
+            </ol>
+
+
+          </div>
+        </div>
+        <div class="plan">
+          <h3>Premium Plan</h3>
+          <p>Starting at €20/hour</p>
+          <a href="#contact" class="cta-button">Choose Plan</a>
+          <div class="plan_description">
+            <ol>
+              <li>
+                Unlimited Personal Training: Enjoy an unlimited number of personal training sessions per month.
+              </li>
+
+              <li>
+                Customized Nutrition Plan: Receive a detailed nutrition plan created specifically for your goals and
+                dietary preferences.
+              </li>
+
+              <li>
+                Advanced Fitness Assessment: Comprehensive fitness assessments to monitor and fine-tune your progress.
+              </li>
+
+              <!--              <li>-->
+              <!--                24/7 Support: Priority access to your trainer for questions, support, and guidance at any time.-->
+              <!--              </li>-->
+
+              <li>
+                Goal-Specific Programs: Specialized programs for weight loss, muscle gain, athletic performance, or any
+                specific fitness goal.
+              </li>
+
+              <li>
+                Variety of Training Styles: Access to a wide range of training styles, from strength training to HIIT,
+                yoga, and more.
+              </li>
+              <li>
+                Online Workouts: Access to video workouts for at-home or on-the-go training.
+              </li>
+
+              <li>
+                Exclusive Resources: Access to exclusive fitness resources, such as meal plans, recipe ideas, and
+                workout guides.
+              </li>
+
+              <!--              <li>-->
+              <!--                Priority Scheduling: First choice for scheduling training sessions.-->
+              <!--              </li>-->
+
+              <!--              <li>-->
+              <!--                Discounts: Special pricing on fitness supplements, equipment, and additional services.-->
+              <!--              </li>-->
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section id="videos" class="videos">
+
+       <div class="container contact message">
+         <h2>Our video lessons</h2>
+       </div>
+      <div class="video-descriprion">
+        Discover a wealth of knowledge and inspiration through our extensive collection of video lessons. At our
+        Website, we're committed to providing you with an engaging and informative learning experience like no
+        other. Whether you're a beginner taking your first steps on your journey to mastery or an experienced enthusiast
+        seeking to deepen your expertise, our video lessons have something for everyone.
+      </div>
+
+      <div class="video_carusel">
+        <div>
+          <iframe height="280" width="385" src="https://www.youtube.com/embed/K9rLuxwTWlY?ecver=2&enablejsapi=1"
+                  frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+          <iframe height="280" width="385" src="https://www.youtube.com/embed/YE7VzlLtp-4?ecver=2&enablejsapi=1"
+                  frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+          <iframe height="280" width="385" src="https://www.youtube.com/embed/FeR-4_Opt-g?ecver=2&enablejsapi=1"
+                  frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+          <iframe height="280" width="385" src="https://www.youtube.com/embed/Ms_vfKrGTsM?ecver=2&enablejsapi=1"
+                  frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+          <iframe height="280" width="385" src="https://www.youtube.com/embed/TICcbeQrzlE?ecver=2&enablejsapi=1"
+                  frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+          <iframe height="280" width="385" src="https://www.youtube.com/embed/t1_0xYtJg78?ecver=2&enablejsapi=1"
+                  frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+          <iframe height="280" width="385" src="https://www.youtube.com/embed/3TmHluYlJs4?ecver=2&enablejsapi=1"
+                  frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <div id="contact" class="container contact message">
+    <h2>Contact us</h2>
+    <p>Ready to begin your fitness transformation? Contact us today to schedule your free consultation.</p>
+    <form enctype="text/plain">
+
+
+      <textarea id="message" name="message" required placeholder="Write us a message"></textarea>
+
+
+      <div><a href="#" class="cta-button" onclick="openEmailClient()">Send message</a></div>
+    </form>
+
+
+  </div>
+  <div class="article-subscription container contact message">
+    <section>
+      <h2>We are online:</h2>
+
+      <div class="contact-methods-all">
+        <div class="contact-methods_left">
+          <ul class="contact-methods">
+            <li>
+              <a href="https://www.facebook.com/YourFacebookPage" target="_blank">
+                <i class="fa fa-facebook"></i> Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/YourYouTubeChannel" target="_blank">
+                <i class="fa fa-youtube"></i> YouTube
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/YourTwitterProfile" target="_blank">
+                <i class="fa fa-twitter"></i> Twitter
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/YourInstagramProfile" target="_blank">
+                <i class="fa fa-instagram"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" onclick="openEmailClient()">
+                <i class="fa fa-envelope"></i> E-Mail
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-methods_right">
+          <ul class="contact-methods">
+            <li>
+              <a href="#" target="_blank">
+                <i class="fa fa-rss"></i> RSS
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/YourTelegramChannel" target="_blank">
+                <i class="fa fa-telegram"></i> Telegram
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/1234567890" target="_blank">
+                <i class="fa fa-whatsapp"></i> WhatsApp
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+4917636703293">
+                <i class="fa fa-phone"></i> Call Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <section>
+    <div class="container contact message">
+    <h2>Visit us in Dortmund</h2>
+
+    </div>
+    <div id="map" class="full_contacts">
+
+
+      <div class="contact_information">
+        <div>
+          <img src="img/map.png"/>
+        </div>
+        <div class="contacts">
+
+          <div class="contact-info">
+            <div class="contact-item">
+
+              <p><i class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;Hermannstraße 108, 44263 Dortmund, Germany</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+  <section class="copyright">
+    <hr style="width:100%;text-align:center;margin-bottom:20px; margin-top: 20px;">
+    <br/>
+    ©Personal Fitness Trainer GmbH | 2023
+  </section>
+</div>
+
+
+
+<script>
+
+  $("#map img, .contact-item").on('click', function () {
+    // var url = "https://www.google.com.sa/maps/search/@51.48743738600402, 7.506563028851312,12.21z?hl=de";
+    var url = "http://maps.google.com/maps?z=12&t=m&q=loc:51.487467245979936, 7.506595223378928";
+    window.open(url, '_blank');
+  });
+
+
+  // window.initMap = initMap;
+
+
+  $(document).ready(function () {
+    $('.video_carusel').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+  });
+
+
+  $(document).ready(function () {
+    $('.video-carousel').slick({
+      slidesToShow: 1, // Number of slides to show at once
+      slidesToScroll: 1,
+      prevArrow: '<button class="slick-prev">Previous</button>',
+      nextArrow: '<button class="slick-next">Next</button>',
+    });
+  });
+
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+  });
+</script>
+
+
+
+
+
+
+
+<div style=""
+             class="eapp-viber-chat-root-layout-component eapps-viber-chat-e878026f-bb60-4469-99aa-8e6713260f4c-custom-css-hook"
+             id="portal-e878026f-bb60-4469-99aa-8e6713260f4c">
+            <div type="floating" class="Window__Component-sc-1wwhwms-0 gFMxIq">
+                <div type="floating" id="chatElementId" class="Window__WindowComponent-sc-1wwhwms-1 cgetzf"
+                     style="width: 360px;">
+                    <div color="rgb(255, 255, 255)" role="button" tabindex="0"
+                         class="Close__Component-sc-9nuxpx-0 jquJIT"></div>
+                    <div class="Header__Component-sc-5nh99s-0 kJzjlF">
+                        <div size="52" class="UserImage__Component-sc-1qu4hk4-0 dwla-DG">
+                            <div class="UserImage__ImageContainer-sc-1qu4hk4-1 jSnLdm">
+                                <div class="UserImage__Image-sc-1qu4hk4-2 ibTKhQ"></div>
+                            </div>
+                        </div>
+                        <div class="Header__Info-sc-5nh99s-1 cDWrEO">
+                            <div class="Header__Name-sc-5nh99s-2 cbZbti">Marita</div>
+                            <div class="Header__AnswerTime-sc-5nh99s-3 gHvZA-d">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ViberChat__Component-sc-17tf7sb-0 lnPhPV">
+                        <div class="ViberChat__Time-sc-17tf7sb-1 dfoZbT">
+                            <div class="ViberChat__TimeInner-sc-17tf7sb-2 kxYJUC">
+                                <div class="ViberChat__TimeValue-sc-17tf7sb-3 gfsNQY">
+                                    <script>
+
+                                        var today = new Date();
+                                        var time = today.getHours() + ":" + today.getMinutes();
+                                        document.write(time);
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ViberChat__MessageContainer-sc-17tf7sb-4 jaBEAy">
+                            <div class="ViberChat__MessageUser-sc-17tf7sb-5 cSA-drn">
+                                <div size="28" class="UserImage__Component-sc-1qu4hk4-0 fhXUPt">
+                                    <div class="UserImage__ImageContainer-sc-1qu4hk4-1 jSnLdm">
+                                        <div class="UserImage__Image-sc-1qu4hk4-2 ibTKhQ"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="DefaultDots__Component-sc-krkl3g-0 eqofwj" style="opacity: 0;">
+                                <div class="DefaultDots__ComponentInner-sc-krkl3g-1 dUAOGg">
+                                    <div class="DefaultDots__Dot-sc-krkl3g-2 DefaultDots__DotOne-sc-krkl3g-3 kVRSwe fTnILA"></div>
+                                    <div class="DefaultDots__Dot-sc-krkl3g-2 DefaultDots__DotTwo-sc-krkl3g-4 kVRSwe CAQwD"></div>
+                                    <div class="DefaultDots__Dot-sc-krkl3g-2 DefaultDots__DotThree-sc-krkl3g-5 kVRSwe cNCCtF"></div>
+                                </div>
+                            </div>
+                            <div class="ViberChat__Message-sc-17tf7sb-6 pfIQQ" style="opacity: 1;">
+                                <div>Hello</div>
+                                <div>I'm here to help you!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a role="button" href="viber://chat?number=375296586722" title="Viber"
+                       class="DefaultButton__DefaultButtonComponent-sc-1v663dx-0 dFLSui"><span
+                            class="DefaultButton__DefaultButtonText-sc-1v663dx-1 ecYRLg">Write a message</span></a>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <div onclick="hideDialog()"
+                             style="cursor: pointer; align-items: center; justify-content: center; border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px; width: 20px; height: 20px; overflow: hidden; position: absolute; right: 8px; top: 8px; background: rgb(249, 50, 98); display: flex;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 10 10"
+                                 style="display: block; pointer-events: none;">
+                                <path fill="#ffffff"
+                                      d="M6.01 5l3.78 3.78a.714.714 0 1 1-1.01 1.01L5 6.01 1.22 9.79A.714.714 0 1 1 .21 8.78L3.99 5 .21 1.22A.714.714 0 0 1 1.22.21L5 3.99 8.78.21a.714.714 0 0 1 1.01 1.01L6.01 5z"></path>
+                            </svg>
+                        </div>
+                        </a></div>
+                </div>
+                <div role="button" tabindex="0" onclick="toggleMainDialog()" type="text"
+                     class="Bubble__BubbleComponent-sc-13azvyr-3 gzHFOs">
+                    <div class="Bubble__NotificationBadge-sc-13azvyr-2 fUqMpy"></div>
+                    <div class="Icon__Component-sc-19xn1fe-0 bWezyq Bubble__StyledIcon-sc-13azvyr-1 fOpOe"
+                         color="rgb(255, 255, 255)" height="20" width="20">
+                        <svg viewBox="0 0 32 32" fill="#0084ff">
+                            <path d="M27.276 4.92C30.322 7.473 32 10.877 32 14.506c0 3.628-1.678 7.032-4.724 9.585-3.017 2.528-7.021 3.92-11.276 3.92-.358 0-.72-.01-1.08-.03C10.251 30.606 6.434 31 4.566 31c-.656 0-1.024-.05-1.04-.052a.44.44 0 0 1-.357-.325.476.476 0 0 1 .135-.48c2.535-2.272 3.007-4.179 3.095-4.83-1.899-1.204-3.478-2.768-4.578-4.539C.63 18.856 0 16.688 0 14.506c0-3.629 1.678-7.033 4.724-9.586C7.74 2.392 11.744 1 16 1c4.255 0 8.26 1.392 11.276 3.92zM9 16a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm7 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm7 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                        </svg>
+                    </div>
+                    <div class="Bubble__BubbleText-sc-13azvyr-0 dVOzFB">Chat</div>
+                </div>
+            </div>
+        </div>
+	<script>
+
+
+
+            function hideDialog() {
+                x.style.display = "none"
+            }
+
+            function toggleMainDialog() {
+                if (typeof (x) != "undefined" && x != null)
+                    if (x.style.display === "none" || x.style.display === "") {
+                        x.style.display = "flex";
+                    } else {
+                        x.style.display = "none";
+                    }
+            }
+
+			var delayInMilliseconds = 5000; //700 second
+            var x = document.getElementById("chatElementId");
+
+
+
+
+
+
+			var adminPart = document.getElementById("admin-menu-wrapper");
+			if(document.body.contains(adminPart))
+				delayInMilliseconds = 5000;
+			console.log(delayInMilliseconds);
+
+
+
+
+
+            setTimeout(
+                function () {
+                    if (typeof (x) != "undefined" && x != null)
+                        if (x.style.display == "") {
+                            toggleMainDialog();
+                        }
+                }
+                , delayInMilliseconds);
+</script>
+
+
+</body>
+</html>

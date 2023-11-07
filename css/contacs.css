@@ -1,0 +1,115 @@
+/* You can add your custom CSS styles here */
+
+.contacts {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #f4f4f4;
+}
+
+.contacts h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.contacts p {
+  font-size: 18px;
+  color: #555;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact-item {
+  margin: 0 20px;
+}
+
+i {
+  font-size: 24px;
+  color: #FF5722;
+}
+
+
+/* You can add your custom CSS styles here */
+
+.contact {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.contact h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #555;
+}
+
+.facebook-contact {
+    display: inline-block;
+    background-color: #1877F2;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+i.fa-facebook {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+
+.contact-form {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.contact-form form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #FF5722;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 30px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #E64A19;
+}
